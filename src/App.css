@@ -1,8 +1,52 @@
-.App {
-  text-align: center;
+* {
+  font-family: "Star Wars", sans-serif;
+  color: white !important;
 }
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-image: url("https://mcdn.wallpapersafari.com/medium/51/46/0eOUfx.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
+  padding-top: 1rem;
 }
 /* write your parent styles in here for your App.js */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  gap: 0.5rem;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5%;
+  height: 6vh;
+  border: 1px solid rgb(121, 241, 121);
+  font-size: 1rem;
+  padding: 0 1rem 0 1rem;
+}
+
+.list-item button {
+  background-color: rgba(8, 8, 8, 0.671);
+  border-radius: 30%;
+}
+
+.list-item.active {
+}
+
+.item-details {
+}
