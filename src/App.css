@@ -31,22 +31,25 @@
 
 .list-item {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border-radius: 5%;
-  height: 6vh;
+  height: 7vh;
   border: 1px solid rgb(121, 241, 121);
   font-size: 1rem;
-  padding: 0 1rem 0 1rem;
-}
-
-.list-item button {
-  background-color: rgba(8, 8, 8, 0.671);
-  border-radius: 30%;
+  padding: 0.5rem 1rem 0 1rem;
+  overflow: hidden;
+  transition: height 0.3s ease-in;
 }
 
 .list-item.active {
+  height: 500px;
 }
 
-.item-details {
+.list-item h6 {
+  margin: 0;
+}
+
+.arrow {
+  rotate: 90deg;
 }

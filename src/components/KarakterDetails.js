@@ -6,6 +6,7 @@ function KarakterDetails(props) {
       {props.data.map((item, i) => (
         <div key={i} className="item-details">
           <p>Gender: {item.gender}</p>
+          <p>Birth Year: {item.birth_year}</p>
           <p>Height: {item.height}</p>
           <p>Mass: {item.mass}</p>
           <p>Eye Color: {item.eye_color}</p>
@@ -14,9 +15,9 @@ function KarakterDetails(props) {
           <div className="films">
             Films
             <ul>
-              {props.data.film.map((film, i) => {
-                <li key={i}>{film}</li>;
-              })}
+              {props.data[i].films.map((film, i) => (
+                <li key={i}>{film}</li>
+              ))}
             </ul>
           </div>
         </div>

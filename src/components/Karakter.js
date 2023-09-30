@@ -1,27 +1,22 @@
 // Karakter bileşeniniz buraya gelecek
-import React from "react";
+import React, { useState } from "react";
 import KarakterDetails from "./KarakterDetails";
-import {
-  Accordion,
-  AccordionBody,
-  AccordionHeader,
-  AccordionItem,
-} from "reactstrap";
 
 function Karakter(props) {
+  const [isOpen, setIsOpen] = useState(false);
   if (!props.viewData) return <h3>Loading...</h3>;
   return (
     <>
       <div className="list">
         {props.viewData.map((item, i) => (
           <div
-            className={`list-item ${props.selected === item ? "active" : ""}`}
+            className={`list-item ${isOpen ? "active" : ""}`}
             key={i}
-            onClick={() => props.clickProp(i)}
+            onClick={() => setIsOpen(!isOpen)}
           >
             <h6>{item.name}</h6>
-            <button>{item["birth_year"]}</button>
-            {/*  <KarakterDetails data={props.viewData} /> */}
+            <div className="arrow">{`>`}</div>
+            <KarakterDetails data={props.viewData} />
           </div>
         ))}
       </div>
